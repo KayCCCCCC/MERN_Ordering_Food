@@ -18,6 +18,6 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api", router)
 
-app.listen(8000, () => {
-    console.log("server started on http://localhost:8000")
+app.listen(7000, () => {
+    console.log("server started on http://localhost:7000")
 })

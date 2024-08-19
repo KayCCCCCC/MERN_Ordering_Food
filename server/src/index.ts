@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
-    return res.json("Hello")
+    return res.send({ message: "Hello" })
 })
 
 app.use("/api", router)

@@ -16,7 +16,7 @@ const ProtectedRoute = () => {
         <Outlet />
     ) : (
         <Navigate
-            to="/login"
+            to="/sign-in"
             replace
             state={{ from: location }} // Store the original location so you can redirect back to it after login.
         />

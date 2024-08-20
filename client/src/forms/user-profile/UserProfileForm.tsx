@@ -87,13 +87,7 @@ const UserProfileForm = ({ onSave, isLoading, currentUser }: Props) => {
                         </FormItem>
                     )} />
                 </div>
-                {isLoading ? (
-                    <LoadingButton />
-                ) : (
-                    <Button type="submit" className="bg-orange-500">
-                        Submit
-                    </Button>
-                )}
+                {isLoading ? <LoadingButton /> : <div className="flex justify-center"><Button type="submit" className="bg-orange-500">Submit</Button></div>}
             </form>
         </Form>
     )

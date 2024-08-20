@@ -3,10 +3,18 @@ import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
 import router from "./routers/index";
+import { v2 as cloudinary } from 'cloudinary';
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string).then(() => {
     console.log("Connected Db Success");
 })
+
+
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_API_KEY,
+    api_secret: process.env.CLOUD_SECRET
+});
 
 const app = express();
 app.use(express.json());
